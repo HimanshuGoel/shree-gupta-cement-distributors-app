@@ -1,0 +1,103 @@
+[debug] [2021-06-01T12:20:54.934Z] ----------------------------------------------------------------------
+[debug] [2021-06-01T12:20:54.939Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-01T12:20:54.939Z] CLI Version:   9.12.0
+[debug] [2021-06-01T12:20:54.939Z] Platform:      win32
+[debug] [2021-06-01T12:20:54.940Z] Node Version:  v12.14.0
+[debug] [2021-06-01T12:20:54.942Z] Time:          Tue Jun 01 2021 17:50:54 GMT+0530 (India Standard Time)
+[debug] [2021-06-01T12:20:54.943Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-01T12:20:54.959Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-01T12:20:54.960Z] > authorizing via signed-in user (himanshu.goel.mca@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\higoel\code\others\shri-gupta-cement-agency
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-06-01T12:21:32.033Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-06-01T12:21:34.081Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-06-01T12:21:34.082Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project shri-gupta-cement-agency (shri-gupta-cement-agency) 
+[debug] [2021-06-01T12:21:36.666Z] Error: EBUSY: resource busy or locked, rename 'C:\Users\higoel\.config\configstore\firebase-tools.json.2201501861' -> 'C:\Users\higoel\.config\configstore\firebase-tools.json'
+    at Object.renameSync (fs.js:643:3)
+    at Function.writeFileSync [as sync] (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\write-file-atomic\index.js:244:8)
+    at Configstore.set all [as all] (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:61:20)
+    at Configstore.set (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:91:12)
+    at Object.makeActiveProject (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:148:31)
+    at Object.doSetup [as project] (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:98:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async init (C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-06-01T12:22:52.211Z] ----------------------------------------------------------------------
+[debug] [2021-06-01T12:22:52.215Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\higoel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-01T12:22:52.215Z] CLI Version:   9.12.0
+[debug] [2021-06-01T12:22:52.215Z] Platform:      win32
+[debug] [2021-06-01T12:22:52.216Z] Node Version:  v12.14.0
+[debug] [2021-06-01T12:22:52.218Z] Time:          Tue Jun 01 2021 17:52:52 GMT+0530 (India Standard Time)
+[debug] [2021-06-01T12:22:52.218Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-01T12:22:52.231Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-01T12:22:52.232Z] > authorizing via signed-in user (himanshu.goel.mca@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\higoel\code\others\shri-gupta-cement-agency
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-06-01T12:23:13.137Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-06-01T12:23:14.924Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-06-01T12:23:14.925Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project shri-gupta-cement-agency (shri-gupta-cement-agency) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-06-01T12:24:12.098Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-06-01T12:24:12.203Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-06-01T12:24:12.204Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.6.3","browserURL":"https://www.gstatic.com/firebasejs/8.6.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.6.3/firebase.tgz"},"live":{"version":"8.6","browserURL":"https://www.gstatic.com/firebasejs/live/8.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/8.6.3/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.6.3/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.6.3/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.6.3/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.6.3/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.6.3/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.6.3/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.memory.js"}}
+[info] i  Skipping write of dist/shri-gupta-cement-agency/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\higoel\code\others\shri-gupta-cement-agency is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=897925238&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-06-01T12:24:29.359Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"300536c32df1ec25e6f3","redirect_uri":"http://localhost:9005","state":"897925238"}
+[debug] [2021-06-01T12:24:30.203Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 01 Jun 2021 12:24:29 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"8b82071ce2b01c00d0fe4859684628d7\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com html-translator.herokuapp.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"3752:39EB:15D8C5C:17D2263:60B626FD"}
+[debug] [2021-06-01T12:24:30.211Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-06-01T12:24:30.824Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-06-01T12:24:30.824Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"HimanshuGoel","id":6235979,"node_id":"MDQ6VXNlcjYyMzU5Nzk=","avatar_url":"https://avatars.githubusercontent.com/u/6235979?v=4","gravatar_id":"","url":"https://api.github.com/users/HimanshuGoel","html_url":"https://github.com/HimanshuGoel","followers_url":"https://api.github.com/users/HimanshuGoel/followers","following_url":"https://api.github.com/users/HimanshuGoel/following{/other_user}","gists_url":"https://api.github.com/users/HimanshuGoel/gists{/gist_id}","starred_url":"https://api.github.com/users/HimanshuGoel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/HimanshuGoel/subscriptions","organizations_url":"https://api.github.com/users/HimanshuGoel/orgs","repos_url":"https://api.github.com/users/HimanshuGoel/repos","events_url":"https://api.github.com/users/HimanshuGoel/events{/privacy}","received_events_url":"https://api.github.com/users/HimanshuGoel/received_events","type":"User","site_admin":false,"name":"Himanshu Goel","company":"Sopra Banking Software","blog":"","location":"Noida","email":"himanshu.goel.mca@gmail.com","hireable":true,"bio":"I work on Typescript, Jasmine, Node JS, etc.","twitter_username":"himanshugoelmca","public_repos":13,"public_gists":0,"followers":7,"following":79,"created_at":"2013-12-21T10:53:48Z","updated_at":"2021-06-01T12:24:28Z","private_gists":0,"total_private_repos":6,"owned_private_repos":6,"disk_usage":3457779,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as HimanshuGoel 
+[info] 
