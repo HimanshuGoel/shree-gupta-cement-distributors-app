@@ -236,6 +236,7 @@
     }
 }
 .angular-logo{
+
     max-width: 90px;
     margin: -50px auto 45px;
 
@@ -244,7 +245,9 @@
     }
 }
 
+
 .brand-logo{
+    display: block;
     max-width: 90px;
 
 
@@ -252,6 +255,14 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 767px) {
+    .brand-logo{
+        display: none;
+    }
+}
+
 .page-header{
     .content-center{
         //margin-top: 85px;
