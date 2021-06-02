@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/shri-gupta-cement-agency",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
