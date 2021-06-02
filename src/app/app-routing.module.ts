@@ -1,10 +1,32 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule, } from '@angular/common';
+import { BrowserModule  } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { ComponentsComponent } from './components/components.component';
+import { ProfileComponent } from './examples/profile/profile.component';
+import { SignupComponent } from './examples/signup/signup.component';
+import { LandingComponent } from './examples/landing/landing.component';
+import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
+
+const routes: Routes =[
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home',             component: ComponentsComponent },
+    { path: 'user-profile',     component: ProfileComponent },
+    { path: 'signup',           component: SignupComponent },
+    { path: 'landing',          component: LandingComponent },
+    { path: 'nucleoicons',      component: NucleoiconsComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes,{
+      useHash: true
+    })
+  ],
+  exports: [
+  ],
 })
 export class AppRoutingModule { }
