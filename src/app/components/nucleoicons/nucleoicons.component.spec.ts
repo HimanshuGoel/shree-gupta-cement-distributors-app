@@ -8,9 +8,8 @@ describe('NucleoiconsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NucleoiconsComponent ]
-    })
-    .compileComponents();
+      declarations: [NucleoiconsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
