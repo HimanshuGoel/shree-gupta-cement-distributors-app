@@ -1,13 +1,12 @@
 {
   "name": "shri-gupta-cement-agency",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "deploy": "firebase deploy"
   },
   "private": true,
