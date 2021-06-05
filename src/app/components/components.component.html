@@ -18,192 +18,82 @@
         </h6>
     </div>
     <div class="main">
-        <app-basicelements></app-basicelements>
-        <app-navigation></app-navigation>
-        <div class="section">
+        <br><br><br>
+
+
+        <div class="section text-center">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Progress Bar</h3>
-                            <br />
-                        </div>
-                        <ngb-progressbar type="success" class="mt-0" [value]="25">25</ngb-progressbar><br>
-                        <ngb-progressbar type="info" class="mt-0" [value]="50"><span class="h6 mb-0">Copying file <b>2
-                                    of 4</b> ...</span></ngb-progressbar><br>
-                        <ngb-progressbar type="warning" class="mt-0" [value]="75" [striped]="true" [animated]="true">
-                            <i>50%</i>
-                        </ngb-progressbar><br>
-                        <ngb-progressbar type="danger" class="mt-0" [value]="100" [striped]="true">Completed!
-                        </ngb-progressbar>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Pagination</h3>
-                            <br />
-                        </div>
-                        <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination">
-                        </ngb-pagination>
-                        <br />
-                        <ngb-pagination [collectionSize]="100" [(page)]="page1" [maxSize]="5" [rotate]="true">
-                        </ngb-pagination>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Navigation Tabs</h3>
-                        </div>
-
-                        <div class="nav-tabs-navigation">
-                            <div class="nav-tabs-wrapper">
-                                <ngb-tabset [justify]="'center'">
-                                    <ngb-tab title="Home">
-                                        <ng-template ngbTabContent>
-                                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power
-                                                efficient. With a smooth metal surface that seamlessly meets the new
-                                                Retina HD display.</p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Profile">
-                                        <ng-template ngbTabContent>
-                                            <p>Here is your profile.</p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Messages">
-                                        <ng-template ngbTabContent>
-                                            <p>Here are your messages.</p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                </ngb-tabset>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Labels</h3>
-                        </div>
-                        <span class="label label-default">Default</span>
-                        <span class="label label-primary">Primary</span>
-                        <span class="label label-info">Info</span>
-                        <span class="label label-success">Success</span>
-                        <span class="label label-warning">Warning</span>
-                        <span class="label label-danger">Danger</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section section-notifications" id="notifications">
-            <div class="container">
-                <div class="tim-title">
-                    <h3>Notification</h3>
-                </div>
-            </div>
-            <app-notification></app-notification>
-        </div>
-        <app-typography></app-typography>
-        <div class="section javascript-components">
-            <div class="container">
-                <div class="tim-title">
-                    <h2>Angular Native Components</h2>
-                </div>
-                <div class="row" id="modals">
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Modal</h3>
-                        </div>
-                        <app-modal-component></app-modal-component>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Popovers</h3>
-                        </div>
-
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="right"
-                            ngbPopover="Here will be some very useful information about this popover."
-                            popoverTitle="Popover on right">
-                            on right
-                        </button>
-
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="top"
-                            ngbPopover="Here will be some very useful information about this popover."
-                            popoverTitle="Popover on top">
-                            on top
-                        </button>
-
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="left"
-                            ngbPopover="Here will be some very useful information about this popover."
-                            popoverTitle="Popover on left">
-                            on left
-                        </button>
-
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="bottom"
-                            ngbPopover="Here will be some very useful information about this popover."
-                            popoverTitle="Popover on bottom">
-                            on bottom
-                        </button>
-
-                    </div>
-                    <br />
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Datepicker</h3>
-                        </div>
-                        <div class="row">
-                            <div class='col-sm-6'>
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
-                                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
-                                                [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker"
-                                                (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
-                                            <div class="input-group-append">
-                                                <span class="glyphicon glyphicon-calendar input-group-text">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tim-title">
-                            <h3>Tooltips</h3>
-                        </div>
-
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="right"
-                            ngbTooltip="Tooltip on right">
-                            on right
-                        </button>
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="left"
-                            ngbTooltip="Tooltip on left">
-                            on left
-                        </button>
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="top"
-                            ngbTooltip="Tooltip on top">
-                            on top
-                        </button>
-                        <button type="button" class="btn btn-outline-danger btn-round" placement="bottom"
-                            ngbTooltip="Tooltip on bottom">
-                            on bottom
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="carousel">
-            <div class="container">
-                <div class="tim-title">
-                    <h3>Carousel</h3>
-                </div>
                 <div class="row">
                     <div class="col-md-8 mr-auto ml-auto">
+                        <h2 class="title">Let's talk about us</h2>
+                        <h5 class="description">We are one of the key distributors of cements, rodi and dust with best
+                            quality at affordable price. We believe that building a house is one of the lifetime
+                            decision and once it is build you can change everything but the key ingredients like cement
+                            can not be changed. So, one must take at-most pre-caution while taking this decision with no
+                            compromise with quality. Due to this, we follow below key-points for our customers.</h5>
+                        <br>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info">
+                            <div class="icon icon-danger">
+                                <i class="nc-icon nc-diamond"></i>
+                            </div>
+                            <div class="description">
+                                <h4 class="info-title">Quality</h4>
+                                <p class="description">We never compromise on quality that is why we only deals only in
+                                    premium quality brands cements who are market leaders in their segments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info">
+                            <div class="icon icon-danger">
+                                <i class="nc-icon nc-atom"></i>
+                            </div>
+                            <div class="description">
+                                <h4 class="info-title">Competitive Price</h4>
+                                <p>Our price are one of most competitive in the town. We believe in customer retention
+                                    and providing products at reasonable price are one of the key secrets for it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info">
+                            <div class="icon icon-danger">
+                                <i class="nc-icon nc-sound-wave"></i>
+                            </div>
+                            <div class="description">
+                                <h4 class="info-title">Precision</h4>
+                                <p>We are very precise when it comes to quantity. We provides various options to
+                                    determine the quantity or weight which we will be delivering.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info">
+                            <div class="icon icon-danger">
+                                <i class="nc-icon nc-delivery-fast"></i>
+                            </div>
+                            <div class="description">
+                                <h4 class="info-title">Committed</h4>
+                                <p>We are very committed towards our customers and provides assistance in end-to-end
+                                    deliveries of the products.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section" id="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mr-auto ml-auto">
                         <div class="card page-carousel">
                             <ngb-carousel>
                                 <ng-template ngbSlide>
@@ -230,134 +120,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="section section-dark section-nucleo-icons">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <h2 class="title">Nucleo Icons</h2><br />
-                        <p class="description">
-                            Now UI Kit comes with 100 custom icons made by our friends from NucleoApp. The official
-                            package contains over 2.100 thin icons which are looking great in combination with Now UI
-                            Kit Make sure you check all of them and use those that you like the most.
-                        </p><br />
-                        <a [routerLink]="['/nucleoicons']" class="btn btn-danger btn-round">View Demo Icons</a>
-                        <a href="https://nucleoapp.com/?ref=1712" class="btn btn-outline-danger btn-round"
-                            target="_blank">View All Icons</a>
-                    </div>
 
-                    <div class="col-lg-6 col-md-12">
-                        <div class="icons-container">
-                            <i class="nc-icon nc-time-alarm"></i>
-                            <i class="nc-icon nc-atom"></i>
-                            <i class="nc-icon nc-camera-compact"></i>
-                            <i class="nc-icon nc-watch-time"></i>
-                            <i class="nc-icon nc-key-25"></i>
-                            <i class="nc-icon nc-diamond"></i>
-                            <i class="nc-icon nc-user-run"></i>
-                            <i class="nc-icon nc-layout-11"></i>
-                            <i class="nc-icon nc-badge"></i>
-                            <i class="nc-icon nc-bulb-63"></i>
-                            <i class="nc-icon nc-favourite-28"></i>
-                            <i class="nc-icon nc-planet"></i>
-                            <i class="nc-icon nc-tie-bow"></i>
-                            <i class="nc-icon nc-zoom-split"></i>
-                            <i class="nc-icon nc-cloud-download-93"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="section section-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h2 class="title">Completed with examples</h2>
-                        <p class="description">The kit comes with three pre-built pages to help you get started faster.
-                            You can change the text and images and you're good to go. More importantly, looking at them
-                            will give you a picture of what you can built with this powerful kit.</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="section section-image section-login" style="background-image: url('assets/img/login-image.jpg');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
-                        <div class="card card-register">
-                            <h3 class="title">Welcome</h3>
-                            <div class="social-line text-center">
-                                <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </div>
-                            <form class="register-form">
-                                <label>Email</label>
-                                <div class="input-group form-group-no-border"
-                                    [ngClass]="{'input-group-focus':focus===true}">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="nc-icon nc-email-85"></i>
-                                        </span>
-                                    </div>
-
-                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus=true"
-                                        (blur)="focus=false">
-                                </div>
-
-                                <label>Password</label>
-                                <div class="input-group form-group-no-border"
-                                    [ngClass]="{'input-group-focus':focus1===true}">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="nc-icon nc-key-25"></i>
-                                        </span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true"
-                                        (blur)="focus1=false">
-                                </div>
-                                <button class="btn btn-danger btn-block btn-round">Register</button>
-                            </form>
-                            <div class="forgot">
-                                <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
-                            </div>
-                        </div>
-                        <div class="col text-center" routerLinkActive="active">
-                            <a [routerLink]="['/signup']" class="btn btn-outline-neutral btn-round btn-lg">View Register
-                                Page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="section section-dark">
-            <div class="container">
-                <div class="row example-page">
-                    <div class="col-md-6 text-center" routerLinkActive="active">
-                        <a [routerLink]="['/landing']">
-                            <img src="./assets/img/examples/landing-page.JPG" alt="Rounded Image"
-                                class="img-rounded img-responsive" style="width: 100%">
-                            <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 text-center" routerLinkActive="active">
-                        <a [routerLink]="['/user-profile']">
-                            <img src="./assets/img/examples/profile-page.JPG" alt="Rounded Image"
-                                class="img-rounded img-responsive" style="width: 100%">
-                            <a [routerLink]="['/user-profile']" class="btn btn-outline-neutral btn-round">Profile
-                                Page</a>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-         -->
         <div class="section section-dark text-center">
             <div class="container">
                 <h2 class="title">Brands We Deal In</h2>
@@ -423,6 +186,9 @@
                 </div>
             </div>
         </div>
+
+        <app-typography></app-typography>
+
         <div class="section">
             <div class="container">
                 <div class="row">
