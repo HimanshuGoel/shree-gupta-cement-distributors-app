@@ -45,28 +45,4 @@ export class NavbarComponent implements OnInit {
       this.sidebarClose();
     }
   }
-
-  isHome() {
-    var title = this.location.prepareExternalUrl(this.location.path());
-    if (title.charAt(0) === '#') {
-      title = title.slice(1);
-    }
-    if (title === '/home') {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  isDocumentation() {
-    var title = this.location.prepareExternalUrl(this.location.path());
-    if (title.charAt(0) === '#') {
-      title = title.slice(1);
-    }
-    if (title === '/documentation') {
-      return true;
-    } else {
-      return false;
-    }
-  }
 }

@@ -65,13 +65,4 @@ export class AppComponent implements OnInit {
       body.classList.add('ie-background');
     }
   }
-  removeFooter() {
-    var title = this.location.prepareExternalUrl(this.location.path());
-    title = title.slice(1);
-    if (title === 'signup' || title === 'nucleoicons') {
-      return false;
-    } else {
-      return true;
-    }
-  }
 }
