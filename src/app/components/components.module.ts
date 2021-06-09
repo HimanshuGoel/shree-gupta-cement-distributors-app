@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,6 +20,7 @@ import { NgbdModalContent } from './modal/modal.component';
     NouisliderModule,
     RouterModule,
     JwBootstrapSwitchNg2Module,
+    HttpClientModule
   ],
   declarations: [
     ComponentsComponent,

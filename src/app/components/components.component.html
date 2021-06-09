@@ -201,7 +201,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Ambuja Cement'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -210,7 +210,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Ambuja Plus'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -219,7 +219,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Ambuja Kawach'"></app-modal-component>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Shree Jang Rodhak'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -241,7 +241,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Shree Roofon'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -250,7 +250,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'MP Birla Chetak'"></app-modal-component>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +263,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'MP Birla Ultimate'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -272,7 +272,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Rodi'"></app-modal-component>
                                 </div>
                             </div>
                             <div class="col-xs-8 col-sm-6 col-md-4">
@@ -281,7 +281,7 @@
                                     class="img-rounded img-responsive img-fixed-size" alt="Rounded Image">
                                 <br><br>
                                 <div class="col-md-12 text-center">
-                                    <app-modal-component></app-modal-component>
+                                    <app-modal-component [name] = "'Dust'"></app-modal-component>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +309,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Name" (focus)="focus=true"
+                                        <input type="text" [(ngModel)]="subscribeMeName" name="name"
+                                            class="form-control" placeholder="Name" (focus)="focus=true"
                                             (blur)="focus=false">
                                     </div>
                                 </div>
@@ -319,16 +320,32 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Email"
-                                            (focus)="focus1=true" (blur)="focus1=false">
+                                        <input [(ngModel)]="subscribeMeEmail" name="email" type="text"
+                                            class="form-control" placeholder="Email" (focus)="focus1=true"
+                                            (blur)="focus1=false">
                                     </div>
                                 </div>
                             </div>
                             <label>Message</label>
-                            <textarea class="form-control" rows="4" placeholder="Any other information..."></textarea>
+                            <textarea class="form-control" name="message" [(ngModel)]="subscribeMeMessage" rows="4"
+                                placeholder="Any other information..."></textarea>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <button class="btn btn-danger btn-lg btn-fill">Subscribe Me</button>
+                                    <button class="btn btn-danger btn-lg btn-fill" (click)="subscribeMe()">Subscribe
+                                        Me</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12 text-center" *ngIf="showSuccess">
+                                    <h6 class="text-success">You details has been send successfully. We will get back to
+                                        you soon.</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center" *ngIf="showError">
+                                    <h6 class="text-danger">There is some error. Please try again after sometime.
+                                    </h6>
                                 </div>
                             </div>
                         </form>
