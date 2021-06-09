@@ -5,7 +5,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-modal-content',
   template: `
     <div class="modal-header">
-      <h5 class="modal-title text-center">Modal title</h5>
+      <h5 class="modal-title text-center">Get Lowest Price</h5>
       <button
         type="button"
         class="close"
@@ -16,16 +16,73 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
       </button>
     </div>
     <div class="modal-body">
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language
-      ocean. A small river named Duden flows by their place and supplies it with
-      the necessary regelialia. It is a paradisematic country, in which roasted
-      parts of sentences fly into your mouth. Even the all-powerful Pointing has
-      no control about the blind texts it is an almost unorthographic life One
-      day however a small line of blind text by the name of Lorem Ipsum decided
-      to leave for the far World of Grammar.
+      <p>Please enter below details - </p>
+      <form class="lowest-price-form">
+        <div class="row">
+          <div class="col-md-12">
+            <label>Name</label>
+            <div
+              class="input-group"
+              [ngClass]="{ 'input-group-focus': focus === true }"
+            >
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="nc-icon nc-single-02"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                (focus)="focus = true"
+                (blur)="focus = false"
+              />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label>Mobile Number</label>
+            <div
+              class="input-group"
+              [ngClass]="{ 'input-group-focus': focus1 === true }"
+            >
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="nc-icon nc-mobile"></i
+                ></span>
+              </div>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Mobile Number"
+                (focus)="focus1 = true"
+                (blur)="focus1 = false"
+              />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label>Minimum Quantity</label>
+            <div
+              class="input-group"
+              [ngClass]="{ 'input-group-focus': focus2 === true }"
+            >
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="nc-icon nc-cart-simple"></i
+                ></span>
+              </div>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Minimum Quantity"
+                (focus)="focus2 = true"
+                (blur)="focus2 = false"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
+
     <div class="modal-footer">
       <div class="left-side">
         <button
@@ -33,7 +90,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
           class="btn btn-default btn-link"
           (click)="activeModal.close('Close click')"
         >
-          Never mind
+          Cancel
         </button>
       </div>
       <div class="divider"></div>
@@ -43,7 +100,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
           class="btn btn-danger btn-link"
           (click)="activeModal.close('Close click')"
         >
-          DELETE
+          Send
         </button>
       </div>
     </div>
@@ -51,6 +108,10 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NgbdModalContent {
   @Input() name;
+
+  focus;
+  focus1;
+  focus2;
 
   constructor(public activeModal: NgbActiveModal) {}
 }
