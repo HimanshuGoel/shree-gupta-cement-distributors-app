@@ -151,7 +151,7 @@ export class NgbdModalContent {
     };
 
     this.httpClient
-      .post('https://formspree.io/f/mknkbnbp', getLowestPriceData)
+      .post('https://formspree.io/f/xknkbnzp', getLowestPriceData)
       .subscribe(
         () => (this.showSuccess = true),
         () => (this.showError = true)

@@ -11,7 +11,7 @@ export class ComponentsComponent implements OnInit {
   focus2;
 
   subscribeMeMessage = '';
-  subscribeMeEmail = '';
+  subscribeMeMobileNumber = '';
   subscribeMeName = '';
   showError = false;
   showSuccess = false;
@@ -24,12 +24,12 @@ export class ComponentsComponent implements OnInit {
     const subscribeMeData = {
       actionType: 'Subscribe Me',
       subscribeMeMessage: this.subscribeMeMessage,
-      subscribeMeEmail: this.subscribeMeEmail,
+      subscribeMeMobileNumber: this.subscribeMeMobileNumber,
       subscribeMeName: this.subscribeMeName,
     };
 
     this.httpClient
-      .post('https://formspree.io/f/mknkbnbp', subscribeMeData)
+      .post('https://formspree.io/f/xknkbnzp', subscribeMeData)
       .subscribe(
         () => (this.showSuccess = true),
         () => (this.showError = true)
