@@ -17,7 +17,7 @@ import { HttpClient } from '@angular/common/http';
       </button>
     </div>
     <div class="modal-body">
-      <p>Please enter below details -</p>
+      <p>We need below details to send you back the lowest price -</p>
       <form class="lowest-price-form">
         <div class="row">
           <div class="col-md-12">
