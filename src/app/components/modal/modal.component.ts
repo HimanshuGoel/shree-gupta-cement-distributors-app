@@ -129,11 +129,11 @@ import { HttpClient } from '@angular/common/http';
   `,
 })
 export class NgbdModalContentComponent {
-  @Input() name;
+  @Input() name = '';
 
-  focus;
-  focus1;
-  focus2;
+  focus = false;
+  focus1 = false;
+  focus2 = false;
 
   showSuccess = false;
   showError = false;
@@ -169,7 +169,7 @@ export class NgbdModalContentComponent {
   templateUrl: './modal.component.html',
 })
 export class NgbdModalComponent {
-  @Input() name: string;
+  @Input() name = '';
   constructor(private modalService: NgbModal) {}
   open() {
     const modalRef = this.modalService.open(NgbdModalContentComponent);

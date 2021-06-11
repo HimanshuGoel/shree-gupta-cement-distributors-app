@@ -1,15 +1,13 @@
 import {
   Component,
   OnInit,
-  Inject,
   Renderer2,
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { DOCUMENT, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 
-import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -20,32 +18,29 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild(NavbarComponent) navbar: NavbarComponent;
-
-  private _router: Subscription;
+  @ViewChild(NavbarComponent) navbar!: NavbarComponent;
 
   constructor(
     private renderer: Renderer2,
     private router: Router,
-    @Inject(DOCUMENT) private document: any,
     private element: ElementRef,
     public location: Location
   ) {}
   ngOnInit() {
-    var navbar: HTMLElement =
+    const navbar: HTMLElement =
       this.element.nativeElement.children[0].children[0];
 
-    this._router = this.router.events
+    this.router.events
       .filter((event) => event instanceof NavigationEnd)
-      .subscribe((event: NavigationEnd) => {
+      .subscribe(() => {
         if (window.outerWidth > 991) {
           window.document.children[0].scrollTop = 0;
         } else {
-          window.document.activeElement.scrollTop = 0;
+          window.document.activeElement!.scrollTop = 0;
         }
         this.navbar.sidebarClose();
       });
-    this.renderer.listen('window', 'scroll', (event) => {
+    this.renderer.listen('window', 'scroll', () => {
       const number = window.scrollY;
       if (number > 150 || window.pageYOffset > 150) {
         navbar.classList.remove('navbar-transparent');
@@ -53,15 +48,17 @@ export class AppComponent implements OnInit {
         navbar.classList.add('navbar-transparent');
       }
     });
-    var ua = window.navigator.userAgent;
-    var trident = ua.indexOf('Trident/');
+    const ua = window.navigator.userAgent;
+    const trident = ua.indexOf('Trident/');
+    let rv: number;
+    let version = 0;
     if (trident > 0) {
       // IE 11 => return version number
-      var rv = ua.indexOf('rv:');
-      var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+      rv = ua.indexOf('rv:');
+      version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
     }
     if (version) {
-      var body = document.getElementsByTagName('body')[0];
+      const body = document.getElementsByTagName('body')[0];
       body.classList.add('ie-background');
     }
   }

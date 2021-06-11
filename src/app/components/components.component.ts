@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './components.component.html',
 })
 export class ComponentsComponent {
-  focus;
-  focus1;
-  focus2;
+  focus = false;
+  focus1 = false;
+  focus2 = false;
 
   subscribeMeMessage = '';
   subscribeMeMobileNumber = '';
