@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',
 })
-export class ComponentsComponent implements OnInit {
+export class ComponentsComponent {
   focus;
   focus1;
   focus2;
@@ -17,8 +17,6 @@ export class ComponentsComponent implements OnInit {
   showSuccess = false;
 
   constructor(private httpClient: HttpClient) {}
-
-  ngOnInit() {}
 
   subscribeMe() {
     const subscribeMeData = {

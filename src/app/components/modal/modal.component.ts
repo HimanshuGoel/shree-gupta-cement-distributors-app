@@ -128,7 +128,7 @@ import { HttpClient } from '@angular/common/http';
     </div>
   `,
 })
-export class NgbdModalContent {
+export class NgbdModalContentComponent {
   @Input() name;
 
   focus;
@@ -172,7 +172,7 @@ export class NgbdModalComponent {
   @Input() name: string;
   constructor(private modalService: NgbModal) {}
   open() {
-    const modalRef = this.modalService.open(NgbdModalContent);
+    const modalRef = this.modalService.open(NgbdModalContentComponent);
     modalRef.componentInstance.name = this.name;
   }
 }
