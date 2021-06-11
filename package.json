@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~12.0.4",
     "@angular/router": "~12.0.4",
     "@ng-bootstrap/ng-bootstrap": "^9.1.2",
+    "@ngneat/hot-toast": "^3.0.0",
     "bootstrap": "4.5.3",
     "core-js": "^3.13.1",
     "font-awesome": "^4.7.0",

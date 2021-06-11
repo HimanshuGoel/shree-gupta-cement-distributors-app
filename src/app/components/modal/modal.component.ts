@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
+import { HotToastService } from '@ngneat/hot-toast';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-content',
@@ -18,7 +20,7 @@ import { HttpClient } from '@angular/common/http';
     </div>
     <div class="modal-body">
       <p>We need below details to send you back the lowest price -</p>
-      <form class="lowest-price-form">
+      <form class="lowest-price-form" [formGroup]="getLowestPriceForm">
         <div class="row">
           <div class="col-md-12">
             <label>Name</label>
@@ -33,8 +35,8 @@ import { HttpClient } from '@angular/common/http';
               </div>
               <input
                 type="text"
-                [(ngModel)]="fullName"
-                name="fullName"
+                name="name"
+                formControlName="name"
                 class="form-control"
                 placeholder="Name"
                 (focus)="focus = true"
@@ -54,7 +56,7 @@ import { HttpClient } from '@angular/common/http';
                 ></span>
               </div>
               <input
-                [(ngModel)]="mobileNumber"
+                formControlName="mobileNumber"
                 name="mobileNumber"
                 type="number"
                 class="form-control"
@@ -76,7 +78,7 @@ import { HttpClient } from '@angular/common/http';
                 ></span>
               </div>
               <input
-                [(ngModel)]="minimumQuantity"
+                formControlName="minimumQuantity"
                 name="minimumQuantity"
                 type="number"
                 class="form-control"
@@ -84,21 +86,6 @@ import { HttpClient } from '@angular/common/http';
                 (focus)="focus2 = true"
                 (blur)="focus2 = false"
               />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center" *ngIf="showSuccess">
-              <h6 class="text-success">
-                You details has been send successfully. We will get back to you
-                soon.
-              </h6>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center" *ngIf="showError">
-              <h6 class="text-danger">
-                There is some error. Please try again after sometime.
-              </h6>
             </div>
           </div>
         </div>
@@ -119,6 +106,7 @@ import { HttpClient } from '@angular/common/http';
       <div class="right-side">
         <button
           type="button"
+          [disabled]="!getLowestPriceForm.valid"
           class="btn btn-danger btn-link"
           (click)="getLowestPrice()"
         >
@@ -135,32 +123,40 @@ export class NgbdModalContentComponent {
   focus1 = false;
   focus2 = false;
 
-  showSuccess = false;
-  showError = false;
+  getLowestPriceForm = this.fb.group({
+    name: [''],
+    minimumQuantity: [''],
+    mobileNumber: ['', Validators.required],
+  });
 
-  fullName = '';
-  minimumQuantity = '';
-  mobileNumber = '';
   getLowestPrice() {
     const getLowestPriceData = {
-      actionType: 'Get Lowest Price',
-      productName: this.name,
-      fullName: this.fullName,
-      minimumQuantity: this.minimumQuantity,
-      mobileNumber: this.mobileNumber,
+      formType: 'Get Lowest Price',
+      customerData: this.getLowestPriceForm.value,
     };
 
     this.httpClient
       .post('https://formspree.io/f/xknkbnzp', getLowestPriceData)
-      .subscribe(
-        () => (this.showSuccess = true),
-        () => (this.showError = true)
-      );
+      .pipe(
+        this.toast.observe({
+          loading: 'Please wait. Sending your details...',
+          success:
+            'You details has been send successfully. We will get back to you soon.',
+          error:
+            'There is some error has been occurred. Please try again after sometime.',
+        })
+      )
+      .subscribe(() => {
+        this.getLowestPriceForm.reset();
+        this.activeModal.close('Close click');
+      });
   }
 
   constructor(
     public activeModal: NgbActiveModal,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private toast: HotToastService,
+    private fb: FormBuilder
   ) {}
 }
 

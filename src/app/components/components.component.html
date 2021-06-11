@@ -95,7 +95,8 @@
                             </div>
                             <div class="description">
                                 <h4 class="info-title">Committed</h4>
-                                <p>To provide more convenience, Customer can do order booking with advance payment and the
+                                <p>To provide more convenience, Customer can do order booking with advance payment and
+                                    the
                                     products will be delivered at the site with nominal delivery charges.
                                 </p>
                             </div>
@@ -306,7 +307,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 mr-auto ml-auto">
-                        <form class="contact-form">
+                        <form class="contact-form" [formGroup]="subscribeMeForm">
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Name</label>
@@ -314,9 +315,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                         </div>
-                                        <input type="text" [(ngModel)]="subscribeMeName" name="name"
-                                            class="form-control" placeholder="Name" (focus)="focus=true"
-                                            (blur)="focus=false">
+                                        <input type="text" name="name" formControlName="name" class="form-control"
+                                            placeholder="Name" (focus)="focus=true" (blur)="focus=false">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -325,32 +325,20 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="nc-icon nc-mobile"></i></span>
                                         </div>
-                                        <input [(ngModel)]="subscribeMeMobileNumber" name="mobileNumber" type="number"
+                                        <input name="mobileNumber" type="number" formControlName="mobileNumber"
                                             class="form-control" placeholder="Mobile Number" (focus)="focus1=true"
                                             (blur)="focus1=false">
                                     </div>
                                 </div>
                             </div>
                             <label>Message</label>
-                            <textarea class="form-control" name="message" [(ngModel)]="subscribeMeMessage" rows="4"
+                            <textarea class="form-control" name="message" formControlName="message" rows="4"
                                 placeholder="Any other information..."></textarea>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <button class="btn btn-danger btn-lg btn-fill" (click)="subscribeMe()">Subscribe
+                                    <button class="btn btn-danger btn-lg btn-fill" [disabled]="!subscribeMeForm.valid"
+                                        (click)="subscribeMe()">Subscribe
                                         Me</button>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12 text-center" *ngIf="showSuccess">
-                                    <h6 class="text-success">You details has been send successfully. We will get back to
-                                        you soon.</h6>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 text-center" *ngIf="showError">
-                                    <h6 class="text-danger">There is some error. Please try again after sometime.
-                                    </h6>
                                 </div>
                             </div>
                         </form>
