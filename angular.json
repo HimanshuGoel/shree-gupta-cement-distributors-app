@@ -36,6 +36,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/sass/paper-kit.scss",
               "src/css/demo.css",
               "src/css/nucleo-icons.css"
@@ -106,6 +107,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/sass/paper-kit.scss",
               "src/css/demo.css",
               "src/css/nucleo-icons.css"
