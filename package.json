@@ -1,5 +1,5 @@
 {
-  "name": "shri-gupta-cement-agency",
+  "name": "shree-gupta-cement-distributors",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
   "private": true,
   "dependencies": {

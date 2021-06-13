@@ -7,7 +7,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shri-gupta-cement-agency": {
+    "shree-gupta-cement-distributors": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shri-gupta-cement-agency",
+            "outputPath": "dist/shree-gupta-cement-distributors",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -80,10 +80,10 @@
           "options": {},
           "configurations": {
             "production": {
-              "browserTarget": "shri-gupta-cement-agency:build:production"
+              "browserTarget": "shree-gupta-cement-distributors:build:production"
             },
             "development": {
-              "browserTarget": "shri-gupta-cement-agency:build:development"
+              "browserTarget": "shree-gupta-cement-distributors:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "shri-gupta-cement-agency:build"
+            "browserTarget": "shree-gupta-cement-distributors:build"
           }
         },
         "test": {
@@ -127,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "shri-gupta-cement-agency"
+  "defaultProject": "shree-gupta-cement-distributors"
 }

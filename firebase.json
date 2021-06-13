@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/shri-gupta-cement-agency",
+    "public": "dist/shree-gupta-cement-distributors",
     "ignore": [
       "firebase.json",
       "**/.*",
