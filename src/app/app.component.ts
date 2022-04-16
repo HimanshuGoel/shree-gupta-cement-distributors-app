@@ -8,7 +8,7 @@ import {
 import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 
-import 'rxjs/add/operator/filter';
+import { filter } from 'rxjs/operators';
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       this.element.nativeElement.children[0].children[0];
 
     this.router.events
-      .filter((event) => event instanceof NavigationEnd)
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         if (window.outerWidth > 991) {
           window.document.children[0].scrollTop = 0;
