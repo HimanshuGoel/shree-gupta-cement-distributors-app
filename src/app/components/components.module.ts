@@ -14,23 +14,22 @@ import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContentComponent } from './modal/modal.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
-    NouisliderModule,
-    RouterModule,
-    JwBootstrapSwitchNg2Module,
-    HttpClientModule,
-    HotToastModule.forRoot(),
-  ],
-  declarations: [
-    ComponentsComponent,
-    NgbdModalComponent,
-    NgbdModalContentComponent,
-  ],
-  entryComponents: [NgbdModalContentComponent],
-  exports: [ComponentsComponent],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule,
+        NouisliderModule,
+        RouterModule,
+        JwBootstrapSwitchNg2Module,
+        HttpClientModule,
+        HotToastModule.forRoot(),
+    ],
+    declarations: [
+        ComponentsComponent,
+        NgbdModalComponent,
+        NgbdModalContentComponent,
+    ],
+    exports: [ComponentsComponent]
 })
 export class ComponentsModule {}
