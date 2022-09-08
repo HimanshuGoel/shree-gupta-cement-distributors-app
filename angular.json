@@ -2,7 +2,9 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": "99320347-475d-44dd-8caa-cbb096ab28b7",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -126,6 +128,5 @@
         }
       }
     }
-  },
-  "defaultProject": "shree-gupta-cement-distributors"
+  }
 }

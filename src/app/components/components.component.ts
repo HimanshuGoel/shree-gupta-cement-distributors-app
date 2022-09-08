@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 import { HotToastService } from '@ngneat/hot-toast';
 @Component({
@@ -21,7 +21,7 @@ export class ComponentsComponent {
   constructor(
     private httpClient: HttpClient,
     private toast: HotToastService,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {}
 
   subscribeMe() {

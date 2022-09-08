@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { HotToastService } from '@ngneat/hot-toast';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-content',
@@ -156,7 +156,7 @@ export class NgbdModalContentComponent {
     public activeModal: NgbActiveModal,
     private httpClient: HttpClient,
     private toast: HotToastService,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {}
 }
 
