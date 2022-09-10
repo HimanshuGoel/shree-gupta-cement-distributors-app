@@ -1,14 +1,14 @@
+import { filter } from 'rxjs/operators';
+
+import { Location } from '@angular/common';
 import {
   Component,
+  ElementRef,
   OnInit,
   Renderer2,
-  ElementRef,
   ViewChild,
 } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router, NavigationEnd } from '@angular/router';
-
-import { filter } from 'rxjs/operators';
+import { NavigationEnd, Router } from '@angular/router';
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -27,9 +27,11 @@ export class AppComponent implements OnInit {
     public location: Location
   ) {}
   ngOnInit() {
-    const navbar: HTMLElement =
-      this.element.nativeElement.children[0].children[0];
+    this.resetSidebarOnNavigation();
+    this.repositionNavbarOnScroll();
+  }
 
+  private resetSidebarOnNavigation() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -40,6 +42,11 @@ export class AppComponent implements OnInit {
         }
         this.navbar.sidebarClose();
       });
+  }
+
+  private repositionNavbarOnScroll() {
+    const navbar: HTMLElement =
+      this.element.nativeElement.children[0].children[0];
     this.renderer.listen('window', 'scroll', () => {
       const number = window.scrollY;
       if (number > 150 || window.pageYOffset > 150) {
@@ -48,18 +55,5 @@ export class AppComponent implements OnInit {
         navbar.classList.add('navbar-transparent');
       }
     });
-    const ua = window.navigator.userAgent;
-    const trident = ua.indexOf('Trident/');
-    let rv: number;
-    let version = 0;
-    if (trident > 0) {
-      // IE 11 => return version number
-      rv = ua.indexOf('rv:');
-      version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-    if (version) {
-      const body = document.getElementsByTagName('body')[0];
-      body.classList.add('ie-background');
-    }
   }
 }

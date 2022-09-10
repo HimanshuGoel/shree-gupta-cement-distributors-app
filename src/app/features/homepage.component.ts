@@ -4,10 +4,10 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 import { HotToastService } from '@ngneat/hot-toast';
 @Component({
-  selector: 'app-components',
-  templateUrl: './components.component.html',
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
 })
-export class ComponentsComponent {
+export class HomepageComponent {
   focus = false;
   focus1 = false;
   focus2 = false;

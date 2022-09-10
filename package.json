@@ -5,11 +5,8 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "watch": "ng build --watch --configuration development",
-    "deploy": "npm run build && firebase deploy",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "deploy": "npm run build && firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +28,6 @@
     "core-js": "^3.25.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
-    "jw-bootstrap-switch-ng2": "^2.0.5",
     "ng2-nouislider": "^1.8.3",
     "nouislider": "^15.5.1",
     "popper.js": "^1.16.1",
@@ -49,19 +45,10 @@
     "@angular-eslint/template-parser": "14.0.3",
     "@angular/cli": "^14.2.2",
     "@angular/compiler-cli": "^14.2.1",
-    "@types/jasmine": "~3.6.0",
     "@types/node": "^18.7.16",
     "@typescript-eslint/eslint-plugin": "4.23.0",
     "@typescript-eslint/parser": "4.23.0",
     "eslint": "^8.23.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "^6.3.18",
-    "karma-chrome-launcher": "^3.1.1",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "^5.0.0",
-    "karma-jasmine-html-reporter": "^1.7.0",
-    "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.6.3"
   }

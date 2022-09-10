@@ -9,27 +9,27 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { HotToastModule } from '@ngneat/hot-toast';
 
-import { ComponentsComponent } from './components.component';
+import { HomepageComponent } from './homepage.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContentComponent } from './modal/modal.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        NgbModule,
-        NouisliderModule,
-        RouterModule,
-        JwBootstrapSwitchNg2Module,
-        HttpClientModule,
-        HotToastModule.forRoot(),
-    ],
-    declarations: [
-        ComponentsComponent,
-        NgbdModalComponent,
-        NgbdModalContentComponent,
-    ],
-    exports: [ComponentsComponent]
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    NouisliderModule,
+    RouterModule,
+    JwBootstrapSwitchNg2Module,
+    HttpClientModule,
+    HotToastModule.forRoot(),
+  ],
+  declarations: [
+    HomepageComponent,
+    NgbdModalComponent,
+    NgbdModalContentComponent,
+  ],
+  exports: [HomepageComponent],
 })
 export class ComponentsModule {}
