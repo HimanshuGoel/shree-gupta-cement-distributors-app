@@ -7,15 +7,11 @@ import { HomepageComponent } from './features/homepage.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
-  { path: 'homepage', component: HomepageComponent },
+  { path: 'homepage', component: HomepageComponent }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes, { useHash: true }),
-  ],
-  exports: [],
+  imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes, { useHash: true })],
+  exports: []
 })
 export class AppRoutingModule {}

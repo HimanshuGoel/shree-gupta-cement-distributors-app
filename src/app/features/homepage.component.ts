@@ -5,7 +5,7 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
 @Component({
   selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
+  templateUrl: './homepage.component.html'
 })
 export class HomepageComponent {
   focus = false;
@@ -15,7 +15,7 @@ export class HomepageComponent {
   subscribeMeForm = this.fb.group({
     name: [''],
     mobileNumber: ['', Validators.required],
-    message: [''],
+    message: ['']
   });
 
   constructor(
@@ -24,10 +24,10 @@ export class HomepageComponent {
     private fb: UntypedFormBuilder
   ) {}
 
-  subscribeMe() {
+  subscribeMe(subscribeMeFormData: any) {
     const subscribeMeData = {
       formType: 'Subscribe Me',
-      customerData: this.subscribeMeForm.value,
+      customerData: subscribeMeFormData
     };
 
     this.httpClient
@@ -35,10 +35,8 @@ export class HomepageComponent {
       .pipe(
         this.toast.observe({
           loading: 'Please wait. Sending your details...',
-          success:
-            'You details has been send successfully. We will get back to you soon.',
-          error:
-            'There is some error has been occurred. Please try again after sometime.',
+          success: 'You details has been send successfully. We will get back to you soon.',
+          error: 'There is some error has been occurred. Please try again after sometime.'
         })
       )
       .subscribe(() => {

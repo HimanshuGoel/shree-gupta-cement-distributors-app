@@ -1,0 +1,97 @@
+<div id="contactUs" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <h2 class="title">Keep in touch?</h2>
+        <p class="description">
+          Cause if you do, we can send you frequent updates regarding the new product launches,
+          major price changes, deals or discounts.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mr-auto ml-auto">
+        <form class="contact-form" [formGroup]="subscribeMeForm">
+          <div class="row">
+            <div class="col-md-6">
+              <label>Name</label>
+              <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  formControlName="name"
+                  class="form-control"
+                  placeholder="Name"
+                  (focus)="focus = true"
+                  (blur)="focus = false"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label>Mobile Number</label>
+              <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="nc-icon nc-mobile"></i></span>
+                </div>
+                <input
+                  name="mobileNumber"
+                  type="number"
+                  formControlName="mobileNumber"
+                  class="form-control"
+                  placeholder="Mobile Number"
+                  (focus)="focus1 = true"
+                  (blur)="focus1 = false"
+                />
+              </div>
+            </div>
+          </div>
+          <label>Message</label>
+          <textarea
+            class="form-control"
+            name="message"
+            formControlName="message"
+            rows="4"
+            placeholder="Any other information..."
+          ></textarea>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <button
+                class="btn btn-danger btn-lg btn-fill"
+                [disabled]="!subscribeMeForm.valid"
+                (click)="subscribeMe()"
+              >
+                Subscribe Me
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- get directions -->
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <h2 class="title">Get Directions</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <div class="map-responsive">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.8000571165912!2d77.22035331438937!3d29.52218665001037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c2a96a57faba9%3A0xe173e300ff3b346e!2sShri%20Gupta%20Cement%20Agency!5e0!3m2!1sen!2sin!4v1623213116705!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,10 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { HomepageComponent } from './homepage.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContentComponent } from './modal/modal.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { KeyProductsComponent } from './key-products/key-products.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [
@@ -23,13 +27,17 @@ import { NgbdModalContentComponent } from './modal/modal.component';
     RouterModule,
     JwBootstrapSwitchNg2Module,
     HttpClientModule,
-    HotToastModule.forRoot(),
+    HotToastModule.forRoot()
   ],
   declarations: [
     HomepageComponent,
     NgbdModalComponent,
     NgbdModalContentComponent,
+    ContactUsComponent,
+    KeyProductsComponent,
+    AboutUsComponent,
+    LandingComponent
   ],
-  exports: [HomepageComponent],
+  exports: [HomepageComponent]
 })
-export class ComponentsModule {}
+export class HomepageModule {}

@@ -6,7 +6,7 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsModule } from './features/homepage.module';
+import { HomepageModule } from './features/homepage.module';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -18,10 +18,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     NgbModule,
     FormsModule,
     RouterModule,
-    ComponentsModule,
-    AppRoutingModule,
+    HomepageModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

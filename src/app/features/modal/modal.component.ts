@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
-import { HotToastService } from '@ngneat/hot-toast';
+import { Component, Input } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HotToastService } from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-modal-content',
@@ -24,14 +24,9 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
         <div class="row">
           <div class="col-md-12">
             <label>Name</label>
-            <div
-              class="input-group"
-              [ngClass]="{ 'input-group-focus': focus === true }"
-            >
+            <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
               <div class="input-group-prepend">
-                <span class="input-group-text"
-                  ><i class="nc-icon nc-single-02"></i
-                ></span>
+                <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
               </div>
               <input
                 type="text"
@@ -46,14 +41,9 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
           </div>
           <div class="col-md-12">
             <label>Mobile Number</label>
-            <div
-              class="input-group"
-              [ngClass]="{ 'input-group-focus': focus1 === true }"
-            >
+            <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
               <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="nc-icon nc-mobile"></i
-                ></span>
+                <span class="input-group-text"> <i class="nc-icon nc-mobile"></i></span>
               </div>
               <input
                 formControlName="mobileNumber"
@@ -68,14 +58,9 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
           </div>
           <div class="col-md-12">
             <label>Minimum Quantity</label>
-            <div
-              class="input-group"
-              [ngClass]="{ 'input-group-focus': focus2 === true }"
-            >
+            <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
               <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="nc-icon nc-cart-simple"></i
-                ></span>
+                <span class="input-group-text"> <i class="nc-icon nc-cart-simple"></i></span>
               </div>
               <input
                 formControlName="minimumQuantity"
@@ -114,7 +99,7 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
         </button>
       </div>
     </div>
-  `,
+  `
 })
 export class NgbdModalContentComponent {
   @Input() name = '';
@@ -126,13 +111,13 @@ export class NgbdModalContentComponent {
   getLowestPriceForm = this.fb.group({
     name: [''],
     minimumQuantity: [''],
-    mobileNumber: ['', Validators.required],
+    mobileNumber: ['', Validators.required]
   });
 
   getLowestPrice() {
     const getLowestPriceData = {
       formType: 'Get Lowest Price',
-      customerData: this.getLowestPriceForm.value,
+      customerData: this.getLowestPriceForm.value
     };
 
     this.httpClient
@@ -140,10 +125,8 @@ export class NgbdModalContentComponent {
       .pipe(
         this.toast.observe({
           loading: 'Please wait. Sending your details...',
-          success:
-            'You details has been send successfully. We will get back to you soon.',
-          error:
-            'There is some error has been occurred. Please try again after sometime.',
+          success: 'You details has been send successfully. We will get back to you soon.',
+          error: 'There is some error has been occurred. Please try again after sometime.'
         })
       )
       .subscribe(() => {
@@ -162,7 +145,7 @@ export class NgbdModalContentComponent {
 
 @Component({
   selector: 'app-modal-component',
-  templateUrl: './modal.component.html',
+  templateUrl: './modal.component.html'
 })
 export class NgbdModalComponent {
   @Input() name = '';
