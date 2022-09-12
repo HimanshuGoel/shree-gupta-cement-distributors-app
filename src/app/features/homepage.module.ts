@@ -1,21 +1,21 @@
+import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
+import { NouisliderModule } from 'ng2-nouislider';
+
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-
-import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { HotToastModule } from '@ngneat/hot-toast';
 
-import { HomepageComponent } from './homepage.component';
-import { NgbdModalComponent } from './modal/modal.component';
-import { NgbdModalContentComponent } from './modal/modal.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { KeyProductsComponent } from './key-products/key-products.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomepageComponent } from './homepage.component';
+import { KeyProductsComponent } from './key-products/key-products.component';
 import { LandingComponent } from './landing/landing.component';
+import { LowestPriceComponent } from './lowest-price/lowest-price.component';
+import { ModalContentComponent } from './lowest-price/modal-content/modal-content.component';
 
 @NgModule({
   imports: [
@@ -31,8 +31,8 @@ import { LandingComponent } from './landing/landing.component';
   ],
   declarations: [
     HomepageComponent,
-    NgbdModalComponent,
-    NgbdModalContentComponent,
+    LowestPriceComponent,
+    ModalContentComponent,
     ContactUsComponent,
     KeyProductsComponent,
     AboutUsComponent,

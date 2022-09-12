@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
-
-import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,21 +8,26 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent {
-  constructor(private fb: UntypedFormBuilder) {}
-
+  constructor() {}
   @Output() onSubscribeMeClick = new EventEmitter();
 
-  focus = false;
-  focus1 = false;
-  focus2 = false;
+  isNameFocused = false;
+  isMobileNumberFocused = false;
 
-  subscribeMeForm = this.fb.group({
-    name: [''],
-    mobileNumber: ['', Validators.required],
-    message: ['']
+  subscribeMeForm = new FormGroup<ISubscribeMeForm>({
+    name: new FormControl('', { nonNullable: true, validators: Validators.required }),
+    mobileNumber: new FormControl('', { nonNullable: true, validators: Validators.required }),
+    message: new FormControl('', { nonNullable: false })
   });
 
   subscribeMe() {
-    this.onSubscribeMeClick.emit(this.subscribeMeForm.value);
+    this.onSubscribeMeClick.emit(this.subscribeMeForm.getRawValue());
+    this.subscribeMeForm.reset();
   }
+}
+
+interface ISubscribeMeForm {
+  name: FormControl<string>;
+  mobileNumber: FormControl<string>;
+  message?: FormControl<string | null>;
 }

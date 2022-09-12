@@ -15,7 +15,7 @@
           <div class="row">
             <div class="col-md-6">
               <label>Name</label>
-              <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
+              <div class="input-group" [ngClass]="{ 'input-group-focus': isNameFocused === true }">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                 </div>
@@ -25,14 +25,17 @@
                   formControlName="name"
                   class="form-control"
                   placeholder="Name"
-                  (focus)="focus = true"
-                  (blur)="focus = false"
+                  (focus)="isNameFocused = true"
+                  (blur)="isNameFocused = false"
                 />
               </div>
             </div>
             <div class="col-md-6">
               <label>Mobile Number</label>
-              <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
+              <div
+                class="input-group"
+                [ngClass]="{ 'input-group-focus': isMobileNumberFocused === true }"
+              >
                 <div class="input-group-prepend">
                   <span class="input-group-text"> <i class="nc-icon nc-mobile"></i></span>
                 </div>
@@ -42,8 +45,8 @@
                   formControlName="mobileNumber"
                   class="form-control"
                   placeholder="Mobile Number"
-                  (focus)="focus1 = true"
-                  (blur)="focus1 = false"
+                  (focus)="isMobileNumberFocused = true"
+                  (blur)="isMobileNumberFocused = false"
                 />
               </div>
             </div>

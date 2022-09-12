@@ -1,0 +1,98 @@
+<div class="modal-header">
+  <h5 class="modal-title text-center">Get Lowest Price</h5>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>We need below details to send you back the lowest price -</p>
+  <form class="lowest-price-form" [formGroup]="getLowestPriceForm">
+    <div class="row">
+      <div class="col-md-12">
+        <label>Name</label>
+        <div class="input-group" [ngClass]="{ 'input-group-focus': isNameFocused === true }">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+          </div>
+          <input
+            type="text"
+            name="name"
+            formControlName="name"
+            class="form-control"
+            placeholder="Name"
+            (focus)="isNameFocused = true"
+            (blur)="isNameFocused = false"
+          />
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label>Mobile Number</label>
+        <div
+          class="input-group"
+          [ngClass]="{ 'input-group-focus': isMobileNumberFocused === true }"
+        >
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="nc-icon nc-mobile"></i></span>
+          </div>
+          <input
+            formControlName="mobileNumber"
+            name="mobileNumber"
+            type="number"
+            class="form-control"
+            placeholder="Mobile Number"
+            (focus)="isMobileNumberFocused = true"
+            (blur)="isMobileNumberFocused = false"
+          />
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label>Minimum Quantity</label>
+        <div
+          class="input-group"
+          [ngClass]="{ 'input-group-focus': isMinimumQuantityFocused === true }"
+        >
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="nc-icon nc-cart-simple"></i></span>
+          </div>
+          <input
+            formControlName="minimumQuantity"
+            name="minimumQuantity"
+            type="number"
+            class="form-control"
+            placeholder="Minimum Quantity"
+            (focus)="isMinimumQuantityFocused = true"
+            (blur)="isMinimumQuantityFocused = false"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <div class="left-side">
+    <button
+      type="button"
+      class="btn btn-default btn-link"
+      (click)="activeModal.close('Close click')"
+    >
+      Cancel
+    </button>
+  </div>
+  <div class="divider"></div>
+  <div class="right-side">
+    <button
+      type="button"
+      [disabled]="!getLowestPriceForm.valid"
+      class="btn btn-danger btn-link"
+      (click)="getLowestPrice()"
+    >
+      Send
+    </button>
+  </div>
+</div>
